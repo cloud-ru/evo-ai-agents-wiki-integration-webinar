@@ -182,10 +182,10 @@ MIT License
 docker build -t evo-ai-agents-outline-agent .
 
 # Тегирование для реестра
-docker tag evo-ai-agents-outline-agent as-konstantinov.cr.cloud.ru/evo-ai-agents-outline-agent:latest
+docker tag evo-ai-agents-outline-agent <package-name>.cr.cloud.ru/evo-ai-agents-outline-agent:latest
 
 # Публикация в реестр
-docker push as-konstantinov.cr.cloud.ru/evo-ai-agents-outline-agent:latest
+docker push <package-name>.cr.cloud.ru/evo-ai-agents-outline-agent:latest
 ```
 
 ### Запуск локально

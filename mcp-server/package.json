@@ -1,0 +1,44 @@
+{
+  "name": "evo-ai-agents-outline-mcp-server",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "dist/mcp.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "yarn build && node dist/mcp.js",
+    "build": "tsc -p .",
+    "start": "npm run build & node dist/mcp.js",
+    "docker:build": "docker build -t evo-ai-agents-outline-mcp-server .",
+    "docker:tag": "docker tag evo-ai-agents-outline-mcp-server as-konstantinov.cr.cloud.ru/evo-ai-agents-outline-mcp-server:latest",
+    "docker:push": "docker push as-konstantinov.cr.cloud.ru/evo-ai-agents-outline-mcp-server:latest",
+    "docker:run": "docker run -p 8080:8080 evo-ai-agents-outline-mcp-server",
+    "deploy": "npm run docker:build && npm run docker:tag && npm run docker:push",
+    "inspect": "mcp-inspector",
+    "format": "prettier --write src/**/*.ts",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.16.0",
+    "axios": "^1.6.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "morgan": "^1.10.1",
+    "tunnel": "^0.0.6",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^4.17.21",
+    "@types/morgan": "^1.9.10",
+    "@typescript-eslint/eslint-plugin": "^8.42.0",
+    "@typescript-eslint/parser": "^8.42.0",
+    "eslint": "^9.34.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "globals": "^16.3.0",
+    "prettier": "^3.6.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.5.3"
+  }
+}

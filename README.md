@@ -298,9 +298,11 @@ MIT License
    ```bash
    cd agent
    docker build -t evo-ai-agents-outline-agent .
-   docker tag evo-ai-agents-outline-agent as-konstantinov.cr.cloud.ru/evo-ai-agents-outline-agent:latest
-   docker push as-konstantinov.cr.cloud.ru/evo-ai-agents-outline-agent:latest
+   docker tag evo-ai-agents-outline-agent <registry-name>.cr.cloud.ru/evo-ai-agents-outline-agent:latest
+   docker push <registry-name>.cr.cloud.ru/evo-ai-agents-outline-agent:latest
    ```
+
+Замените <registry-name> на название вашего бакета.
 
 ## Поддержка
 

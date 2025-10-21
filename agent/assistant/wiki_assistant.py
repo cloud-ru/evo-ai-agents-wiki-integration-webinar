@@ -86,16 +86,7 @@ class WikiAssistant:
         def normalize_model(model: str | None, api_base: str | None) -> str | None:
             if not model:
                 return model
-            if "/" in model and model.split("/", 1)[0] in {
-                "openai",
-                "hosted_vllm",
-                "ollama",
-                "anthropic",
-                "azure",
-                "vertex_ai",
-                "cohere",
-                "huggingface",
-            }:
+            if "/" in model and model.split("/", 1)[0] in {"hosted_vllm"}:
                 return model
             provider = "hosted_vllm"
             return f"{provider}/{model}"

@@ -16,7 +16,7 @@ from a2a.types import (
 
 async def main():
     timeout_config = httpx.Timeout(5 * 60.0)
-    base_url = "http://localhost:10000"
+    base_url = "https://8a7371d3-38ee-4d4a-ace1-e233a37d8f1e-agent.ai-agent.inference.cloud.ru"
     async with httpx.AsyncClient(timeout=timeout_config) as httpx_client:
         httpx_client.headers["Authorization"] = "Bearer <token>"
         resolver = A2ACardResolver(
@@ -31,7 +31,7 @@ async def main():
         send_message_payload: dict[str, Any] = {
             "message": {
                 "role": "user",
-                "parts": [{"kind": "text", "text": "Can I use outline with slack?"}],
+                "parts": [{"kind": "text", "text": "Какие есть PaaS сервисы в cloud.ru?"}],
                 "messageId": uuid4().hex,
             },
         }

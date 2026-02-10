@@ -16,7 +16,7 @@ class RetrievedDocument:
 
 
 class McpKeywordEnhancedRetriever:
-    """Keyword-enhanced retriever without LangChain.
+    """Keyword-enhanced retriever.
 
     Expects a callable `keyword_fn(question: str) -> str` that returns comma-separated keywords.
     """

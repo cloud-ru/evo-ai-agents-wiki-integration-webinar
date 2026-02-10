@@ -156,8 +156,8 @@ assistant/
 ├── agent_task_manager.py# Исполнитель для a2a-sdk, мапит события задач
 ├── start_a2a.py         # Точка входа Starlette + a2a-sdk
 ├── mcp_client.py        # Клиент MCP-сервера
-├── prompts.py           # Строковые шаблоны промптов (без LangChain)
-├── retrievers.py        # Ретривер без LangChain, использует LiteLLM для ключевых слов
+├── prompts.py           # Строковые шаблоны промптов
+├── retrievers.py        # Ретривер, использует LiteLLM для ключевых слов
 └── wiki_assistant.py    # Основная реализация ассистента (LiteLLM + MCP)
 ```
 
